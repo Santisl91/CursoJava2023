@@ -4,63 +4,72 @@ import java.io.*;
 import java.util.*;
 
 public class App {
+
     public static void main(String[] args) {
-        // Leer el archivo countries.txt y almacenar los datos en un HashMap
-        HashMap<String, String> mapaPaisesCapitales = new HashMap<>();
+        Map<String, String> paisesCapitales = new HashMap<>();
+
+        String nombreArchivo = "/Users/santiagosantos/IdeaProjects/CursoJava2023/Sprint1_Java_Language/src/main/java/Task_S1_03_Java_Collections/N1_Ex03/countries.txt";
+
         try {
-            BufferedReader br = new BufferedReader(new FileReader("countries.txt"));
+            BufferedReader lectorArchivo = new BufferedReader(new FileReader(nombreArchivo));
             String linea;
-            while ((linea = br.readLine()) != null) {
-                String[] partes = linea.split(",");
+
+            while ((linea = lectorArchivo.readLine()) != null) {
+
+                String[] partes = linea.split(" ");
+
                 if (partes.length == 2) {
                     String pais = partes[0].trim();
                     String capital = partes[1].trim();
-                    mapaPaisesCapitales.put(pais, capital);
+                    paisesCapitales.put(pais, capital);
                 }
             }
-            br.close();
+            lectorArchivo.close();
+
+            for (Map.Entry<String, String> entry : paisesCapitales.entrySet()) {
+                System.out.println("País: " + entry.getKey() + ", Capital: " + entry.getValue());
+            }
         } catch (IOException e) {
-            e.printStackTrace();
+            System.err.println("Error al leer el archivo: " + e.getMessage());
         }
 
-        // Pedir el nombre del usuario
         Scanner scanner = new Scanner(System.in);
-        System.out.print("Ingrese su nombre: ");
+        System.out.print("Ingresa tu nombre de usuario: ");
         String nombreUsuario = scanner.nextLine();
 
         int puntuacion = 0;
+
+        List<String> paises = new ArrayList<>(paisesCapitales.keySet());
+
         Random random = new Random();
 
-        // Realizar el juego 10 veces
-        for (int i = 1; i <= 10; i++) {
-            List<String> paises = new ArrayList<>(mapaPaisesCapitales.keySet());
-            String paisAleatorio = paises.get(random.nextInt(paises.size()));
-            String capitalCorrecta = mapaPaisesCapitales.get(paisAleatorio);
+        for (int i = 0; i < 10; i++) {
+            int indiceAleatorio = random.nextInt(paises.size());
+            String paisAleatorio = paises.get(indiceAleatorio);
+            String capitalCorrecta = paisesCapitales.get(paisAleatorio);
 
-            System.out.println("Pregunta " + i + ": ¿Cuál es la capital de " + paisAleatorio + "?");
-            String respuestaUsuario = scanner.nextLine();
+            System.out.println("Adivina la capital de " + paisAleatorio + ": ");
+            String capitalUsuario = scanner.nextLine();
 
-            if (respuestaUsuario.equalsIgnoreCase(capitalCorrecta)) {
-                System.out.println("¡Correcto!");
+            if (capitalUsuario.equalsIgnoreCase(capitalCorrecta)) {
+                System.out.println("¡Correcto! Ganaste un punto.");
                 puntuacion++;
             } else {
-                System.out.println("Respuesta incorrecta. La capital es " + capitalCorrecta);
+                System.out.println("Incorrecto. La capital correcta es " + capitalCorrecta + ".");
             }
         }
-
-        // Guardar la puntuación en el archivo clasificacion.txt
+        String nuevoArchivo = "/Users/santiagosantos/IdeaProjects/CursoJava2023/Sprint1_Java_Language/src/main/java/Task_S1_03_Java_Collections/N1_Ex03/clasificacion.txt";
         try {
-            FileWriter fw = new FileWriter("clasificacion.txt", true);
-            BufferedWriter bw = new BufferedWriter(fw);
-            bw.write(nombreUsuario + ": " + puntuacion + " puntos");
-            bw.newLine();
-            bw.close();
+            BufferedWriter writer = new BufferedWriter(new FileWriter(nuevoArchivo, true));
+            writer.write(nombreUsuario + ": " + puntuacion + " puntos");
+            writer.newLine();
+            writer.close();
+            System.out.println("Puntuación guardada en clasificacion.txt");
         } catch (IOException e) {
-            e.printStackTrace();
+            System.err.println("Error al guardar la puntuación: " + e.getMessage());
         }
 
-        System.out.println("Fin del juego. Tu puntuación es: " + puntuacion);
-        scanner.close();
     }
 }
+
 
