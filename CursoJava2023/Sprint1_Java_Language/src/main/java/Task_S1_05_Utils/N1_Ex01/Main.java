@@ -1,20 +1,24 @@
 package Task_S1_05_Utils.N1_Ex01;
 
+import java.io.File;
+import java.util.Arrays;
 
 public class Main {
-    public static void main(String[] args) {
-        if (args.length != 1) {
-            System.out.println("Uso: java App <ruta_del_directorio>");
-            System.exit(1);
-        }
 
-        String directorio = args[0];
-        ListarDirectorio.listarDirec(directorio);
+    public static void main(String[] args) {
+        String directoryPath = "/Users/santiagosantos/IdeaProjects/CursoJava2023";
+        File directory = new File(directoryPath);
+
+        if (directory.isDirectory()) {
+            String[] contents = directory.list();
+            Arrays.sort(contents);
+
+            System.out.println("Directorio ordenado alfabeticamente: ");
+            for (String item : contents) {
+                System.out.println(item);
+            }
+        } else {
+            System.out.println("'" + directoryPath + "' no es un directorio.");
+        }
     }
 }
-
-
-
-
-
-
