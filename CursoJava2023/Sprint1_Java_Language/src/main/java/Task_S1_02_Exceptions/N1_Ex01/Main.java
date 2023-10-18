@@ -3,7 +3,7 @@ package Task_S1_02_Exceptions.N1_Ex01;
 import java.util.ArrayList;
 import java.util.List;
 
-public class App {
+public class Main {
     public static void main(String[] args) {
             try {
                 Producto producto1 = new Producto("cafe", 20.5);

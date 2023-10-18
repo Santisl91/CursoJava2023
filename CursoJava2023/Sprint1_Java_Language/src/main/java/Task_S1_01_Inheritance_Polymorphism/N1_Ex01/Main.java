@@ -1,6 +1,6 @@
 package Task_S1_01_Inheritance_Polymorphism.N1_Ex01;
 
-public class App {
+public class Main {
     static {
         System.out.println("Demostrando Static{}");
     }

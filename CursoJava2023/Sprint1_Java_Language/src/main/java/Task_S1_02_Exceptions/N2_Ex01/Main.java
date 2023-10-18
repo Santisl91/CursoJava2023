@@ -1,6 +1,6 @@
 package Task_S1_02_Exceptions.N2_Ex01;
 
-public class App {
+public class Main {
     public static void main(String[] args) {
         byte edad = Input.leerByte("Introduce tu edad");
         int numeroEntero = Input.leerInt("Introduce un número entero");

@@ -3,7 +3,7 @@ package Task_S1_03_Java_Collections.N2_Ex02;
 import java.util.Set;
 import java.util.TreeSet;
 
-public class App {
+public class Main {
     public static void main(String[] args) {
 
         Set<Restaurant> puntuacionRestaurantes = new TreeSet<>();

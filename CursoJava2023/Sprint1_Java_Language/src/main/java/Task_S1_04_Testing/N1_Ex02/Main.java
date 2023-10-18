@@ -3,7 +3,7 @@ package Task_S1_04_Testing.N1_Ex02;
 import java.util.ArrayList;
 import java.util.List;
 
-public class App {
+public class Main {
     public static void main(String[] args) {
 
         List<CalculoDni> listaDNI = new ArrayList<>();

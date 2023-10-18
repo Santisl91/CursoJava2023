@@ -2,7 +2,7 @@ package Task_S1_03_Java_Collections.N2_Ex01;
 
 import java.util.HashSet;
 
-public class App {
+public class Main {
     public static void main(String[] args) {
 
         HashSet<Restaurant> puntuacionRestaurantes = new HashSet<>();

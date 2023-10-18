@@ -1,6 +1,6 @@
 package Task_S1_01_Inheritance_Polymorphism.N1_Ex02;
 
-public class App {
+public class Main {
     public static void main(String[] args) {
 
         Coche miCoche = new Coche(2000);
