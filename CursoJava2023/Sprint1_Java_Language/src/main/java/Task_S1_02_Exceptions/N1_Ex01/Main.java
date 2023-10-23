@@ -15,16 +15,6 @@ public class Main {
 
                 nuevaVenta.calcularTotal();
 
-            /*PRUEBA MENSAJE EXCEPCION CON PRODUCTOS
-            nuevaLista.add(producto1);
-            nuevaLista.add(producto2);
-            nuevaVenta.setProductoList(nuevaLista);
-
-            nuevaVenta.calcularTotal();
-
-            System.out.println("La venta nueva tiene los productos: " + nuevaVenta.getProductoList().toString() +
-            " un precio total de: " + nuevaVenta.getPrecioTotal());*/
-
 
             } catch (VentaBuidaException e) {
                 System.out.println(e.getMessage());
