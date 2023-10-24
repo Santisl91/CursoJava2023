@@ -44,7 +44,7 @@ public class Input {
         return valor;
     }
     public static float leerFloat(String mensaje){
-        float valor = 0;
+        float valor = 0f;
         boolean entradaValida = false;
 
         do {
@@ -61,7 +61,7 @@ public class Input {
         return valor;
     }
     public static double leerDouble(String mensaje){
-        double valor = 0.0;
+        double valor = 0.0d;
         boolean entradaValida = false;
 
         do {

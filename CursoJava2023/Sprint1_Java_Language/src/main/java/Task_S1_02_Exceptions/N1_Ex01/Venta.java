@@ -30,7 +30,7 @@ public class Venta{
     }
     public void calcularTotal() throws VentaBuidaException{
         if (productoList.isEmpty()) {
-            throw new VentaBuidaException();
+            throw new VentaBuidaException("Para hacer una venta primero debes añadir productos");
         }
         for (Producto producto:productoList){
             precioTotal += producto.getPrecio();
