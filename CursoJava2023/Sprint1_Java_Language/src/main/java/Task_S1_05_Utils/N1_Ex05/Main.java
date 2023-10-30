@@ -13,7 +13,7 @@ public class Main {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        
+
         SerializableObject deserializedObj = null;
 
         try (ObjectInputStream inputStream = new ObjectInputStream(new FileInputStream(filePath)) ) {
