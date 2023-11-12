@@ -3,7 +3,7 @@ package Task_S1_04_Testing.N1_Ex02;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Main {
+public class Main_ListDNI {
     public static void main(String[] args) {
 
         List<CalculoDni> listaDNI = new ArrayList<>();
@@ -32,8 +32,8 @@ public class Main {
 
 
         for (CalculoDni dni : listaDNI) {
-            char letraDNI = CalculoDni.calcularLetrasDNI(dni.getNumeroDni());
-            System.out.println("la letra del DNI " + dni.getNumeroDni() + " es:" + letraDNI);
+            char letraDNI = CalculoDni.calcularLetrasDNI(dni.getDniNumber());
+            System.out.println("la letra del DNI " + dni.getDniNumber() + " es:" + letraDNI);
 
         }
     }

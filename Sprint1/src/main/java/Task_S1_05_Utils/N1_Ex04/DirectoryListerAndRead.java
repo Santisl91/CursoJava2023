@@ -49,17 +49,4 @@ public class DirectoryListerAndRead {
             e.printStackTrace();
         }
     }
-
-    public static void main(String[] args) {
-        String directoryPath = "/Users/santiagosantos/IdeaProjects";
-        String outputFile = "DirectoryList.txt";
-        String textFilePath = "DirectoryList.txt";
-
-        DirectoryListerAndRead directoryLister = new DirectoryListerAndRead(directoryPath);
-        directoryLister.listDirectoryTreeAndSaveToFile(outputFile);
-        System.out.println("Directory Tree saved to '" + outputFile + "'.");
-
-        System.out.println("\nContent of '" + textFilePath + "':");
-        directoryLister.readAndPrintTextFile(textFilePath);
-    }
 }

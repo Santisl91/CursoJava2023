@@ -1,4 +1,5 @@
 package Task_S1_07_Annotations.N2_Ex01;
+
 import com.google.gson.Gson;
 
 import java.io.FileWriter;

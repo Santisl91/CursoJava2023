@@ -1,25 +1,21 @@
 package Task_S1_04_Testing.N1_Ex02;
 
 public class CalculoDni {
-    int numeroDni;
+    int dniNumber;
 
-    public CalculoDni(int numeroDni) {
-        this.numeroDni = numeroDni;
+    public CalculoDni(int dniNumber) {
+        this.dniNumber = dniNumber;
     }
 
-    public int getNumeroDni() {
-        return numeroDni;
+    public int getDniNumber() {
+        return dniNumber;
     }
 
-    public void setNumeroDni(int numeroDni) {
-        this.numeroDni = numeroDni;
-    }
+    public static char calcularLetrasDNI(int dniNumber) {
 
-    public static char calcularLetrasDNI(int numeroDNI) {
+        char[] dniLetters = "TRWAGMYFPDXBNJZSQVHLCKE".toCharArray();
 
-        char[] letrasDni = "TRWAGMYFPDXBNJZSQVHLCKE".toCharArray();
-
-        int indice = numeroDNI % 23;
-        return letrasDni[indice];
+        int indice = dniNumber % 23;
+        return dniLetters[indice];
     }
 }

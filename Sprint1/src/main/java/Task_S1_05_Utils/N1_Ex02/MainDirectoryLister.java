@@ -34,10 +34,4 @@ public class MainDirectoryLister {
         return dateFormat.format(lastModified);
     }
 
-    public static void main(String[] args) {
-        String directoryPath = "/Users/santiagosantos/IdeaProjects";
-        MainDirectoryLister directoryLister = new MainDirectoryLister(directoryPath);
-        System.out.println("Directory Tree for '" + directoryPath + "':");
-        directoryLister.listDirectoryTree();
-    }
 }

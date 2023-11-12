@@ -39,13 +39,5 @@ public class DirectoryListerTxt {
         return dateFormat.format(lastModified);
     }
 
-    public static void main(String[] args) {
-        String directoryPath = "/Users/santiagosantos/IdeaProjects";
-        String outputFile = "DirectoryList.txt";
-
-        DirectoryListerTxt directoryLister = new DirectoryListerTxt(directoryPath);
-        directoryLister.listDirectoryTreeAndSaveToFile(outputFile);
-        System.out.println("Directory Tree saved to '" + outputFile + "'.");
-    }
 }
 

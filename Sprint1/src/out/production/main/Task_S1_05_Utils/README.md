@@ -1,8 +1,8 @@
 ## Instrucciones
 
-# README: Task 1, 2, 3, 4, 5
+# README: Listado Alfabético de Archivos en un Directorio
 
-Estos son programas simples en Java que te permite ordenar alfabéticamente, listar, guardar y leer  
+Este es un programa simple en Java que te permite listar alfabéticamente 
 los archivos y directorios en un directorio específico. Esta guía te 
 mostrará cómo utilizar el programa desde la terminal.
 
@@ -34,11 +34,16 @@ Luego, ejecuta los siguientes comandos:
 javac Main.java
 java Main <ruta_del_directorio>
 
-En los ejercicios 1,2,3,4; sustituye <copiar directorio aca> por la ruta del directorio que deseas 
+Sustituye <ruta_del_directorio> por la ruta del directorio que deseas 
 listar alfabéticamente. Por ejemplo, si deseas listar el contenido de tu 
 directorio de inicio en macOS, puedes ejecutar:
 
 java Main /Users/tu_usuario
+
+4.Ver el listado alfabético
+
+El programa mostrará en la terminal el listado alfabético de archivos y 
+directorios en el directorio especificado.
 
 **Notas**
 
