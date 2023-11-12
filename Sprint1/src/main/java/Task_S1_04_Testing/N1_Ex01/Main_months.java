@@ -2,9 +2,6 @@ package Task_S1_04_Testing.N1_Ex01;
 
 import java.util.ArrayList;
 import java.util.List;
-import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.*;
-
 public class Main{
 
     public void testListaMeses() {
@@ -23,10 +20,5 @@ public class Main{
         mesesDelAnio.add("Noviembre");
         mesesDelAnio.add("Diciembre");
 
-        assertEquals(12, mesesDelAnio.size());
-
-        assertNotNull(mesesDelAnio);
-
-        assertEquals("Agosto", mesesDelAnio.get(7));
     }
 }
