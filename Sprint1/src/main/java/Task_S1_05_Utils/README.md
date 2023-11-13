@@ -34,8 +34,7 @@ Luego, ejecuta los siguientes comandos:
 javac Main.java
 java Main <ruta_del_directorio>
 
-En los ejercicios 1,2,3,4; sustituye <copiar directorio aca> por la ruta del directorio que deseas 
-listar alfabéticamente. Por ejemplo, si deseas listar el contenido de tu 
+Por ejemplo, si deseas listar el contenido de tu 
 directorio de inicio en macOS, puedes ejecutar:
 
 java Main /Users/tu_usuario
