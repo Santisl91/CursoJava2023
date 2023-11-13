@@ -8,7 +8,7 @@ class Main_ArrayIndexOutOfBoundsExceptionTest {
     @Test
     public void testThrowException() {
         Main_ArrayIndexOutOfBoundsException arrayException = new Main_ArrayIndexOutOfBoundsException();
-        int invalidIndex = 6;
+        int invalidIndex = 9;
 
         assertThrows(ArrayIndexOutOfBoundsException.class, () -> arrayException.throwException(invalidIndex));
     }

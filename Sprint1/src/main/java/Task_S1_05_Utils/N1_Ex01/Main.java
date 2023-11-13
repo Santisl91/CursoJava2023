@@ -5,7 +5,12 @@ import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) {
-        String directoryPath = ("copiar directorio");
+        if (args.length < 1) {
+            System.out.println("Por favor, ingresa la ruta del directorio como argumento al ejecutar el programa.");
+            return;
+        }
+
+        String directoryPath = args[0];
         File directory = new File(directoryPath);
 
         if (directory.isDirectory()) {
