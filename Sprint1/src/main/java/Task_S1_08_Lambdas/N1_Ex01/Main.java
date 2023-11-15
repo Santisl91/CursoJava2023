@@ -8,11 +8,11 @@ public class Main {
     public static void main(String[] args) {
         List<String> listStrings = Arrays.asList("Ciao", "linda", "Santiago", "Pedro", "Peru");
 
-        List<String> result = listStrings
-                .stream()
-                .filter(s -> s.contains("o"))
+        List<String> result = listStrings.stream()
+                .filter(s -> s.toLowerCase().contains("O"))
                 .collect(Collectors.toList());
 
         result.forEach(System.out::println);
     }
 }
+

@@ -1,7 +1,8 @@
 package Task_S1_08_Lambdas.N1_Ex06;
 
-import java.util.*;
-import java.util.stream.Collectors;
+import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
@@ -14,20 +15,9 @@ public class Main {
         list.add("ciao");
         list.add(21);
 
-        List<String> chains = list.stream()
-                .filter(element -> element instanceof String)
-                .map(element -> (String) element)
-                .sorted(Comparator.comparing(String::length))
-                .collect(Collectors.toList());
+        list.sort(Comparator.comparing(s -> s.toString().length()));
 
-        List<Object> numbers = list.stream()
-                .filter(element -> element instanceof Integer)
-                .collect(Collectors.toList());
-
-
-        chains.forEach(element -> System.out.println(element));
-
-        numbers.forEach(element -> System.out.println(element));
+        list.forEach(System.out::println);
     }
 }
 
